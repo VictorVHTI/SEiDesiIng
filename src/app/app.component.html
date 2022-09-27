@@ -303,18 +303,30 @@
 </style>
 
 <!-- Toolbar -->
+<div class="overlay" *ngIf="showLoader" (click)="showLoader = false; page='dashboard'">
+  <div class="overlay__inner">
+      <div class="overlay__content"><span class="spinner"></span></div>
+  </div>
+</div>
+
 <div>
-  <div class="row vh-100">
+  <!-- -------------------------- -->
+  <!-- -------- Init Page ----------- -->
+  <!-- -------------------------- -->
+  <div class="row vh-100" *ngIf="page == 'login'">
     <div class="col-xs-6 login-content">
       <div class="logo">
         <img src="/assets/imgs/logo.png" alt="">
       </div>
 
-      <div class="text-center">
+      <div *ngIf="screen == 'home'" class="text-center" style="font-size: 18px;">
         <span>Bienvenido <br/> Inicia sesión para continuar</span>
       </div>
 
-      <div class="login-input">
+      <!-- -------------------------- -->
+      <!-- -------- Login ----------- -->
+      <!-- -------------------------- -->
+      <div class="login-input" *ngIf="screen == 'home'">
 
         <div class="row">
           <div class="col-xs-6 lb-title">
@@ -334,14 +346,14 @@
           <div class="col-xs-6 lb-title">
             <span >Contraseña</span>
           </div>
-          <input >
+          <input type="password">
         </div>
 
         <div class="row">
           <div class="col-xs-6 lb-title">
             <span></span>
           </div>
-          <span>Olvide mi contraseña</span>
+          <a (click)="changeScreen('forgotPassword')" class="register">Olvide mi contraseña</a>
         </div>
 
         <div class="row">
@@ -349,9 +361,83 @@
             <span>Recuerdame</span>
           </div>
           <div class="col-xs-6">
-            <button class="se-btn"> Ingresar </button>
+            <button class="se-btn" (click)="login()"> INGRESAR </button>
           </div>
         </div>
+
+      </div>
+
+
+      <!-- -------------------------- -->
+      <!-- -------- Forgot Passoword ----------- -->
+      <!-- -------------------------- -->
+      <div *ngIf="screen == 'forgotPassword'" class="flex-center forgot-password">
+        <!-- <mat-icon>lock</mat-icon> -->
+        <img *ngIf="!sendEmail" src="/assets/imgs/lock.png" alt="">
+        <div *ngIf="!sendEmail">
+          <span>Tu correo electrónico</span>
+          <input >
+        </div>
+        <button *ngIf="!sendEmail" class="se-btn" (click)="sendEmail = true"> CONFIRMAR </button>
+
+        <div *ngIf="sendEmail" class="fp-message">
+          <span>
+            Se ha enviado un correo electrónico con las credenciales para restablecer tu contraseña
+          </span>
+        </div>
+      </div>
+
+      <!-- -------------------------- -->
+      <!-- -------- Register ----------- -->
+      <!-- -------------------------- -->
+      <div class="login-input" *ngIf="screen == 'register'">
+
+        <div class="row">
+          <div class="col-xs-6 lb-title">
+            <span >Nombre</span>
+          </div>
+          <input >
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 lb-title">
+            <span >Apellidos</span>
+          </div>
+          <input >
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 lb-title">
+            <span >Correo</span>
+          </div>
+          <input >
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 lb-title">
+            <span >Contraseña</span>
+          </div>
+          <input >
+        </div>
+
+        <div class="row">
+          <div class="col-xs-6 lb-title">
+            <span >Repetir Contraseña</span>
+          </div>
+          <input type="password" >
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <a *ngIf="screen == 'home'" (click)="changeScreen('register')" class="register">Registrarme</a>
+
+        <div *ngIf="screen == 'register' || screen == 'forgotPassword'" class="flex-center">
+          <button class="se-btn" *ngIf="screen == 'register'" (click)="register()"> REGISTRARME </button>
+          <a (click)="changeScreen('home')" class="register" style="padding-top: 15px;">
+            Volver a inicio de sesión</a>
+        </div>
+        
 
       </div>
 
@@ -359,25 +445,85 @@
         "Tu solución en nuestas manos"
       </div>
   
+      <!-- -------------------------- -->
+      <!-- -------- Social Icon ----------- -->
+      <!-- -------------------------- -->
       <div class="social-icon">
         <div>
-          <img src="/assets/imgs/fb.png" alt="">
+          <img src="/assets/imgs/facebook.png" alt="">
         </div>
         <div>
-          <img src="/assets/imgs/fb.png" alt="">
+          <img src="/assets/imgs/insta.png" alt="">
         </div>
         <div>
-          <img src="/assets/imgs/fb.png" alt="">
+          <img src="/assets/imgs/telegram.png" alt="">
         </div>
         <div>
-          <img src="/assets/imgs/fb.png" alt="">
+          <img src="/assets/imgs/whatsapp.png" alt="">
         </div>
       </div>
 
     </div>
   
     <div class="col-xs-6 bg-div">
-      <div style="background-image: url(/assets/imgs/background.png)" class="bg-div"></div>
+      <div style="background-image: url(/assets/imgs/background.png)" class="bg-div">
+      
+        <p class="bg-title">Usa nuestro sistema al toque <br/> descargando el app</p>
+        <p class="bg-subtitle">¡Descárgala aquí y ahora en iOS o Android <br/> para crear tu cuenta!</p>
+
+        <div class="div-store">
+          <div>
+            <img src="/assets/imgs/facebook.png" alt="">
+            <p>Play  Store</p>
+          </div>
+          <div>
+            <img src="/assets/imgs/facebook.png" alt="">
+            <p>App  Store</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <!-- -------------------------- -->
+  <!-- -------- Init Page ----------- -->
+  <!-- -------------------------- -->
+  <div *ngIf="page == 'dashboard'" class="dashboard">
+
+    <div class="dsh-title">
+      <h1>Gestión de inversiones</h1>
+      <div>
+        <span>Bienvenido Estimad@ Gerardo Padilla</span>
+        <img src="/assets/imgs/user.png" alt="">
+      </div>
+    </div>
+
+    <div class="dsh-grid">
+      <div class="dsh-div dash-menu">
+
+      </div>
+
+      <div class="dash-content">
+        <div class="dsh-div investment">
+
+        </div>
+
+        <div class="investment-bottom">
+          <div class="dsh-div balance">
+
+          </div>
+
+          <div class="dsh-div balance">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="dsh-div dash-info">
+        
+      </div>
     </div>
 
   </div>
