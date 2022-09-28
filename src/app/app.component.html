@@ -473,11 +473,11 @@
 
         <div class="div-store">
           <div>
-            <img src="/assets/imgs/facebook.png" alt="">
+            <img src="/assets/imgs/playsore.png" alt="">
             <p>Play  Store</p>
           </div>
           <div>
-            <img src="/assets/imgs/facebook.png" alt="">
+            <img src="/assets/imgs/appsore.png" alt="">
             <p>App  Store</p>
           </div>
         </div>
@@ -488,7 +488,7 @@
   </div>
 
   <!-- -------------------------- -->
-  <!-- -------- Init Page ----------- -->
+  <!-- -------- Dashboard Page ----------- -->
   <!-- -------------------------- -->
   <div *ngIf="page == 'dashboard'" class="dashboard">
 
@@ -502,27 +502,339 @@
 
     <div class="dsh-grid">
       <div class="dsh-div dash-menu">
+        <img src="/assets/imgs/logo_dsh.png" alt="">
+        <hr>
+
+        <div class="i-menu">
+          <div class="div-select">
+            <i class="fas fa-table-cells i-select"></i>
+          </div>
+          <div>
+            <i class="fas fa-folder-open"></i>
+          </div>
+          <div class="menu-bell">
+            <i class="fas fa-bell"></i>
+            <div>2</div>
+          </div>
+        </div>
+
+        <hr class="hr-menu">
+
+        <div class="bottom-menu">
+          <i class="fas fa-sun i-select"></i>
+          <i class="fa fa-moon"></i>
+        </div>
+
 
       </div>
 
       <div class="dash-content">
         <div class="dsh-div investment">
+          <div class="col-xs-6">
+            <div class="investment-content-main">
+              <div class="investment-title">
+                <h4>Grafico de Inversiones</h4>
+                <img src="/assets/imgs/business_chart.png" alt="">
+              </div>
+  
+              <div class="inverstment-percentaje">
+                <div class="center-item">
+                  <i class="fas fa-arrow-trend-up"></i>
+                </div>
+                <span>80%</span>
+              </div>
+  
+              <h5>Información de Inversiones</h5>
+  
+              <div class="div-chart">
+                <div>
+                  <span class="balance-amount">2,164.00</span>
+                  <div class="balance-percentaje">
+                    <span>+6.4%</span>
+                    <i class="fas fa-circle-up"></i>
+                  </div>
+                </div>
+  
+                <div class="chart center-item">
+                  <div>
+                    <span>46%</span>
+                    <span class="increase">Increase</span>
+                  </div>
+                </div>
+              </div>
+  
+              <div class="info-chart">
+                <div style="background: #18A0FB;"></div>
+                <h4>Inversion</h4>
+                <div></div>
+                <h4>Rentabilidad</h4>
+              </div>
+            </div>
+          </div>
 
+          <div class="col-xs-6 inv-info-main">
+            <div class="inv-option">
+              <div>
+                <select name="month" id="mont" style="width: 100px;">
+                  <option value="Enero">Enero</option>
+                  <option value="Febrero">Febrero</option>
+                  <option value="Marzo">Marzo</option>
+                  <option value="Abril">Abril</option>
+                  <option value="Mayo">Mayo</option>
+                  <option value="Junio">Junio</option>
+                  <option value="Julio">Julio</option>
+                  <option value="Agosto">Agosto</option>
+                  <option value="Septiembre">Septiembre</option>
+                  <option value="Octube">Octube</option>
+                  <option value="Noviembre">Noviembre</option>
+                  <option value="Diciembre">Diciembre</option>
+                </select>
+              </div>
+              <div>
+                <select name="year" id="year" style="width: 100px;">
+                  <option value="2022">2022</option>
+                  <option value="2022">2022</option>
+                  <option value="2022">2022</option>
+                  <option value="2022">2022</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="inver-div ivc-estimate mgv-0 inv-cnt div-red">
+              <div class="center-item d-red">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <section class="cont-middle">
+                <span>Title</span>
+                <section>
+                  <span class="cont-middle-span">128.6</span>
+                  <i class="fas fa-arrow-trend-up"></i>
+                </section>
+              </section>
+              <section>
+              </section>
+            </div>
+
+            <div class="inver-div ivc-estimate mgv-0 inv-cnt div-orange">
+              <div class="center-item d-orange">
+                <i class="fas fa-calculator"></i>
+              </div>
+              <section class="cont-middle">
+                <span>Title</span>
+                <section>
+                  <span class="cont-middle-span">64%</span>
+                  <i class="fas fa-arrow-trend-up"></i>
+                </section>
+              </section>
+              <section class="center-item bg-gray">
+                <i class="fas fa-chevron-right"></i>
+              </section>
+            </div>
+
+            <div class="inver-div ivc-estimate mgv-0 inv-cnt">
+              <div class="center-item">
+                <i class="fas fa-file-circle-check"></i>
+              </div>
+              <section class="cont-middle">
+                <span>Title</span>
+                <section>
+                  <span style="font-size: 20px;">24</span>
+                  <span style="font-size: 10px; padding-right: 10px;">/32</span>
+                  <i style="color: #779ACF;" class="fas fa-arrow-trend-up"></i>
+                </section>
+              </section>
+              <section>
+              </section>
+            </div>
+
+          </div>
         </div>
 
         <div class="investment-bottom">
-          <div class="dsh-div balance">
+          <div class="dsh-div balance row">
+            <div class="col-xs-6">
+              <img src="/assets/imgs/TU-EFECTIVO-ALTOQUE.png" width="100%" alt="">
+              <div class="balance-content">
+                <span>Balance</span>
+                <hr>
+                <span class="balance-amount">$64,124.00</span>
+                <div class="balance-percentaje">
+                  <span>+6.4%</span>
+                  <i class="fas fa-circle-up"></i>
+                </div>
+              </div>
+            </div>
 
+            <div class="col-xs-6 balance-btn">
+              <div class="icon-btn">
+                <div>
+                  <i class="fas fa-dollar-sign"></i>
+                  <span>Solicitar <br/> Prestamo</span>
+                </div>
+              </div>
+              <div class="icon-btn">
+                <div>
+                  <i class="fas fa-link"></i>
+                  <span>Crear Link</span>
+                </div>
+              </div>
+            </div>
           </div>
 
           <div class="dsh-div balance">
-
+            <div class="balance-content">
+              <div class="balance-client">
+                <span>Cliente Oro</span>
+                <div>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+  
+              <div class="balance-percent-value">
+                <span>64%</span>
+                <span>100%</span>
+              </div>
+  
+              <div class="bar-loader">
+                <div class="charge"></div><div class="no-charge"></div>
+              </div>
+  
+              <div class="balance-percent-value" style="margin: 9px 0px;">
+                <span class="next-lvl">Falta 36% para el siguiente Nivel</span>
+                <div class="btn-up-lvl">Subir Nivel</div>
+              </div>
+  
+              <div class="benefit">
+                <span>Mis beneficios</span> 
+              </div>
+  
+              <div class="benefit-list">
+                <div>
+                  <i class="fas fa-check-double"></i>
+                  <span>1 Unlimited Bandwidth</span>
+                </div>
+                <div>
+                  <i class="fas fa-check-double"></i>
+                  <span>2 PDF Access Sosmed</span>
+                </div>
+                <div>
+                  <i class="fas fa-check-double"></i>
+                  <span>1 Support System</span>
+                </div>
+                <div>
+                  <i class="fas fa-check-double"></i>
+                  <span>1 Support System</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
 
       <div class="dsh-div dash-info">
-        
+        <div class="inver-div notifi">
+          <div class="center-item noti-count">
+            <span>2</span>
+          </div>
+          <div class="noti-body">
+            <span>Notificacion</span>
+            <span>Tienes Nuevas Notificaciones</span>
+          </div>
+          <div>
+            <i class="fas fa-x noti-close"></i>
+          </div>
+        </div>
+
+        <div class="top-inver">
+          <i class="fas fa-person-rays"></i>
+          <span>TOP DE INVERSIONES</span>
+        </div>
+
+        <div class="inver-div investment-card">
+          <div class="inver-row">
+            <div class="center-item i-circular">
+              <i class="fas fa-user-large"></i>
+            </div>
+            <span>Inversion Más Alta</span>
+          </div>
+
+          <div class="investment-content">
+            <span>32</span>
+            <i class="fas fa-arrow-trend-up"></i>
+
+            <div class="inv-date">
+              <div>
+                <span>Fecha de Inversión</span>
+                <span>25/28/2022</span>
+              </div>
+
+              <div>
+                <span>Rentabilidad</span>
+                <span>S/.  7250</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="inver-div investment-card">
+          <div class="inver-row">
+            <div class="center-item i-circular">
+              <i class="fas fa-user-large"></i>
+            </div>
+            <span>Inversion Más Baja</span>
+          </div>
+
+          <div class="investment-content">
+            <span>32</span>
+            <i class="fas fa-arrow-trend-up"></i>
+
+            <div class="inv-date">
+              <div>
+                <span>Fecha de Inversión</span>
+                <span>25/28/2022</span>
+              </div>
+
+              <div>
+                <span>Rentabilidad</span>
+                <span>S/.  7250</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="invoice">
+          <h5>Facturas</h5>
+
+          <div class="inver-div ivc-estimate">
+            <div class="center-item">
+              <i class="fas fa-file-circle-check"></i>
+            </div>
+            <span>Estimadas</span>
+            <h6>128</h6>
+          </div>
+
+          <div class="inver-div ivc-estimate">
+            <div class="center-item">
+              <i class="fas fa-file-circle-check"></i>
+            </div>
+            <span>Sin emitir</span>
+            <h6>128</h6>
+          </div>
+
+          <div class="upload-pfd">
+            <div class="max-pdf">
+              <span>Subir documento en PDF</span>
+              <span style="color: red;">* <span>max. 256 GB</span></span>
+            </div>
+            <div class="btn-pdf">
+              <i class="fas fa-upload"></i>
+              <span>SUBIR</span> 
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 

@@ -1,5 +1,6 @@
 :root {
   --color-red: rgba(213, 14, 14, 0.7);
+  --color-purple: #642EFF;
 }
 
 *{font-family: 'Montserrat', sans-serif;}
@@ -230,18 +231,11 @@
   height: calc(100% - 70px);
 }
 
-/* .dsh-grid div {
-  background-color: white;
-  height: 94%;
-  margin: 15px;
-  border-radius: 15px;
-  box-shadow: 0px 2px 8px rgba(196, 202, 212, 0.24);
-} */
-
 .dsh-div {
   background-color: white;
   border-radius: 15px;
   margin: 15px;
+  /* margin: 0px 15px 15px 15px; */
   box-shadow: 0px 2px 8px rgba(196, 202, 212, 0.24);
 
 }
@@ -249,6 +243,70 @@
 .dash-menu {
   height: 94%;
   width: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dash-menu img {
+  width: 30%;
+  padding: 25px;
+}
+
+.dash-menu hr {
+  border: 1px solid #F3F4F6;
+  width: 60%;
+}
+
+.dash-menu  i {
+  font-size: 18px;
+  color: #7D8BA1;
+}
+
+.i-menu div {
+  width: 40px;
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-select {
+  background-color: #F3F4F6;
+}
+
+.i-select {
+  color: black !important;
+}
+
+.hr-menu {
+  margin: 3rem 0px;
+}
+
+.bottom-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-menu i {
+  margin-bottom: 30px;
+}
+
+.menu-bell {
+  position: absolute;
+}
+
+.menu-bell div {
+  position: absolute;
+  top: -3px;
+  right: 7px;
+  color: white;
+  background-color: #E57361;
+  width: 12px;
+  height: 12px;
+  font-size: 9px;
 }
 
 .dash-content {
@@ -258,7 +316,10 @@
 
 .dash-info {
   height: 94%;
-  width: 30%;
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .investment {
@@ -273,7 +334,453 @@
 
 .balance {
   height: 91%;
+  width: 50% !important;
+}
+
+.balance-content {
+  padding: 0px 15px 0px 1.5rem;
+}
+
+.balance-content hr {
+  width: 100%;
+  border: 1px solid rgba(6, 68, 254, 1);
+}
+
+.balance-amount {
+  font-size: 24px;
+}
+
+.balance-percentaje {
+  padding-top: 3px;
+}
+
+.balance-percentaje span {
+  font-size: 12px;
+  color: var(--color-purple);
+}
+
+.balance-percentaje i {
+  color: var(--color-purple);
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+.balance-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.icon-btn {
+  color: white;
+  background-color: var(--color-purple);
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 9px;
+  width: 40%;
+}
+
+.icon-btn div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-btn div i {
+  padding-right: 15px;
+  font-size: 20px;
+}
+
+.balance-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+  /* justify-content: space-between; */
+}
+
+.balance-client {
+  display: flex;
+  color: rgba(56, 233, 12, 1);
+  padding-bottom: 10px;
+}
+
+.balance-client div {
+  display: flex;
   width: 50%;
+  justify-content: space-evenly;
+}
+
+.balance-percent-value {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  color: #454F5F;
+  font-size: 10px;
+}
+
+.bar-loader {
+  width: 100%;
+  height: 10px;
+  display: flex;
+}
+
+.charge {
+  height: 10px;
+  width: 64%;
+  background-color: #779ACF;
+  border-radius: 10px;
+}
+
+.no-charge {
+  height: 10px;
+  width: calc(100% - 64%);
+  background: #F3F4F6;
+  /* border-radius: 10px; */
+  border-top-right-radius: 15px;
+}
+
+.next-lvl {
+  font-size: 10px;
+  color: gray;
+}
+
+.btn-up-lvl {
+  width: 35%;
+  color: white;
+  background-color: black;
+  height: 23px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit {
+  color: rgba(181, 178, 178, 1);
+  font-size: 13px;
+}
+
+.benefit-list i {
+  color: #1355FF;
+  margin-right: 15px;
+}
+
+.benefit-list div {
+  padding: 5px 0px;
+}
+
+.inver-div {
+  margin: 15px;
+  padding: 10px;
+  border: 1px solid #DCE0E5;
+  border-radius: 12px;
+}
+
+.notifi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.noti-count {
+  width: 30px !important;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #F3F4F6;
+}
+
+.noti-body {
+  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.noti-close {
+  color: #9C9EAB;
+  font-size: 11px;
+}
+
+.top-inver {
+  margin-left: 35px;
+}
+
+.top-inver i{
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.top-inver span {
+  font-size: 12px;
+}
+
+.investment-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.inver-row {
+  display: flex;
+  align-items: center;
+}
+
+.i-circular {
+  width: 25px;
+  height: 25px;
+  border-radius: 25px;
+  background-color: #FCEFED;
+  color: #E57361;
+}
+
+.inver-row span {
+  padding-left: 10px;
+  font-size: 12px;
+  color: gray;
+}
+
+.investment-content {
+  display: flex;
+  align-items: center;
+}
+
+.investment-content > span{
+  font-size: 30px;
+  padding-left: 20px;
+  padding-right: 5px;
+}
+
+.investment-content > i{
+  font-size: 20px;
+  color: #779ACF;
+  padding-right: 15px;
+}
+
+.inv-date {
+  color: rgba(125, 139, 161, 1);
+  font-size: 10px;
+  width: 100%;
+}
+
+.inv-date div {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.invoice {
+  margin: 15px;
+  padding: 10px;
+  border: 1px dashed #DCE0E5;;
+  border-radius: 12px;
+}
+
+.invoice h5, .invoice span {
+  color: rgba(125, 139, 161, 1)
+}
+
+.ivc-estimate {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ivc-estimate div {
+  height: 40px;
+  width: 40px;
+  border-radius: 10px;
+  background-color: #F0F4FA;
+  color: #779ACF;
+}
+
+.ivc-estimate i {
+  font-size: 17px;
+}
+
+.ivc-estimate h6 {
+  font-size: 23px;
+}
+
+.ivc-estimate span {
+  font-size: 10px;
+}
+
+.upload-pfd {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.upload-pfd span {
+  font-size: 8px;
+  color: #B5B2B2;
+}
+
+.max-pdf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-pdf {
+  color: white;
+  background-color: black;
+  padding: 5px 12px;
+  border-radius: 15px;
+}
+
+.btn-pdf span {
+  font-size: 10px;
+  padding-left: 5px;
+  color: white;
+}
+
+.investment-content-main {
+  padding: 15px 0px 0px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.investment-title {
+  display: flex;
+  align-items: center;
+}
+
+.investment-title h4 {
+  padding-right: 20px;
+}
+
+.inverstment-percentaje {
+  display: flex;
+  align-items: center;
+  padding: 4px 10px 4px 0px;
+  background-color: #18A0FB;
+  border-radius: 18px;
+  margin-top: 1.5rem;
+}
+
+.inverstment-percentaje div {
+  background-color: #F0F4FA;
+  padding: 5px;
+  border-radius: 15px;
+  margin-right: 7px;
+}
+
+.inverstment-percentaje i {
+color: #779ACF;
+}
+
+.info-chart {
+  display: flex;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.info-chart div {
+  width: 15px;
+  height: 15px;
+  background-color: #E57361;
+  border-radius: 15px;
+}
+
+.inv-info-main {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.inv-option {
+  display: flex;
+  width: 70%;
+  margin: 0px auto;
+  justify-content: space-between;
+}
+
+.inv-cnt {
+  width: 65% !important;
+}
+
+.cont-middle {
+
+}
+
+.cont-middle > span{
+  color: #7D8BA1;
+}
+
+.cont-middle-span {
+  font-size: 20px !important;
+  padding-right: 10px;
+}
+
+.cont-middle section {
+  display: flex;
+  align-items: center;
+}
+
+.div-red i {
+  color: #E57361 !important;
+}
+
+.d-red {
+  background-color: #FCEFED !important;
+}
+
+.div-orange i {
+  color: #F4A952 !important;
+}
+
+.d-orange {
+  background-color: #FEF5EC !important;
+}
+
+.bg-gray {
+  width: 25px;
+  height: 25px;
+  background: #FEF5EC;
+  border-radius: 25px;
+}
+
+.div-chart {
+  display: flex;
+  align-items: center;
+}
+
+.chart {
+  width: 100px;
+    height: 100px;
+    border:7px solid #18A0FB;
+    border-radius: 100px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.chart div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chart div span {
+  font-size: 27px;
+}
+
+.increase {
+  font-size: 10px !important;
+  color: #6B7094;
+}
+
+select {
+  border: none;
+  background: #F3F4F6;
+  padding: 6px 10px;
+  border-radius: 10px;
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -294,6 +801,15 @@
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
+.mgv-0 {
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+.center-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
 
 button:hover {
   cursor: pointer;
