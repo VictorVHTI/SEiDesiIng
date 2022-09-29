@@ -783,6 +783,15 @@ select {
   border-radius: 10px;
 }
 
+.error {
+  border-color: red !important;
+}
+
+.error-msg {
+  text-align: center;
+  color: red;
+}
+
 /* You can add global styles to this file, and also import other style files */
 /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)

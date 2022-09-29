@@ -9,9 +9,13 @@ export class AppComponent {
 
   title = 'solucionesEmpresariales';
   screen: string = 'home';
-  page: string = 'dashboard';
+  //page: string = 'dashboard';
+  page: string = 'login';
   sendEmail: boolean = false;
   showLoader: boolean = false;
+  email: string = '';
+  password: string = '';
+  error: boolean = false;
 
   constructor() { }
 
@@ -20,7 +24,11 @@ export class AppComponent {
   }
 
   login() {
-    this.showLoader = true;
+    if (!this.email || !this.password) {
+      this.error = true;
+    } else {
+      this.showLoader = true;
+    }
   }
 
   register() {
